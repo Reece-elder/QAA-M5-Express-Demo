@@ -10,6 +10,7 @@ pipeline {
         stage('Deploy'){
             steps {
                 sh "docker run -d -p 80:5000 --name node-cont node-app"
+                sh "sleep 5"
                 sh "curl localhost"
             }
         }
