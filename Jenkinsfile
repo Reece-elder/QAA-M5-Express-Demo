@@ -17,6 +17,7 @@ pipeline {
     post { 
         always { 
             cleanWs()
+            sh "docker rm -f node-cont"
         }
     }
 }
